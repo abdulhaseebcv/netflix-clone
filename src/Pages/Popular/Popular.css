@@ -1,0 +1,46 @@
+.popular-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.popular-img {
+    max-height: 350px;
+    margin-right: 10px;
+    position: relative;
+    margin-top: 20px;
+    transition: .3s ease-in-out; 
+}
+
+.popular-img:hover{
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.popular-title{
+    margin-top: 4.5rem;
+ color: white;
+ margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+    .popular-img {
+        
+        padding: 0.7rem;
+        width: 100vw;
+        margin-top: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left:10px
+    }
+  
+    .popular-section{
+        padding-left: 20px;
+    }
+}
+

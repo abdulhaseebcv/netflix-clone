@@ -1,0 +1,46 @@
+.upcoming-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.upcoming-img {
+    max-height: 350px;
+    margin-right: 10px;
+    position: relative;
+    margin-top: 20px;
+    transition: .3s ease-in-out; 
+}
+
+.upcoming-img:hover{
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.upcoming-title{
+    margin-top: 4.5rem;
+ color: white;
+ margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+    .upcoming-img {
+        
+        padding: 0.7rem;
+        width: 100vw;
+        margin-top: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+  
+    .upcoming-title{
+        margin-left: 26px;
+    }
+}
+
