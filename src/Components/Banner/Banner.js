@@ -10,6 +10,7 @@ import {API_KEY} from '../../Constants/Constants'
 function Banner() {
   const [movies,SetMovies] = useState([])
   const [urlYt,seturlYt] = useState('')
+  
   useEffect(() => {
     axios.get(banner).then((response)=>{
       SetMovies(response.data.results[1])

@@ -6,15 +6,15 @@ function Navbar() {
   const [state,setState] = useState(false)
   const handleClick = ()=>{
     setState(!state)
-
   }
   return (
     <div className='nav'>
       <div className="left-section">
-        <Link className='link' to='/'> <img className='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="Netflix-logo" /></Link>
+        <img className='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="Netflix-logo" />
       </div>
      <div>
       <ul id='navbar' className={state ? '#navbar active' : '#navbar'}>
+        <Link className='link' to='/'><li>Home</li></Link>
         <Link className='link' to='/toprated'><li>Top Rated</li></Link>
         <Link className='link' to='/trending'><li>Trending</li></Link>
         <Link className='link' to='/popular'><li>Popular</li></Link>
