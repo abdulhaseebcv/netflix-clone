@@ -11,7 +11,7 @@ function Banner() {
   const [urlYt,seturlYt] = useState('')
   useEffect(() => {
     axios.get(banner).then((response)=>{
-      SetMovies(response.data.results[1])
+      SetMovies(response.data.results[9])
     })
   }, [])
   const handleclick=(id)=>{

@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route exact element={<Home/>}  path="/"  />
+        <Route exact element={<Home/>}  path="/netflix-clone"  />
         <Route element={<Toprated/>} path='/toprated'/>
         <Route element={<Trending/>} path='/trending'/>
         <Route element={<Popular/>} path='/popular'/>

@@ -14,7 +14,7 @@ function Navbar() {
       </div>
      <div>
       <ul id='navbar' className={state ? '#navbar active' : '#navbar'}>
-        <Link className='link' to='/'><li>Home</li></Link>
+        <Link className='link' to='/netflix-clone'><li>Home</li></Link>
         <Link className='link' to='/toprated'><li>Top Rated</li></Link>
         <Link className='link' to='/trending'><li>Trending</li></Link>
         <Link className='link' to='/popular'><li>Popular</li></Link>
