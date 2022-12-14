@@ -7,7 +7,7 @@ function Footer() {
      
      <div className="footer-shade">
      
-      <img className='footer-logo' src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt="Netflix logo" />
+      <img className='footer-logo' src="https://denverprblog.files.wordpress.com/2018/06/netflix-e1529941239480.png" alt="Netflix logo" />
       </div>
       <div className="footer-content">
       <p>Netflix Clone React made by <a href="https://github.com/abdulhaseebcv">Abdul Haseeb</a></p>
