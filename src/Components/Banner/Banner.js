@@ -5,19 +5,17 @@ import {banner} from '../../Config/url'
 import { useState } from 'react'
 import {imgUrl} from '../../Constants/Constants'
 import YouTube from 'react-youtube'
-import {API_KEY} from '../../Constants/Constants'
 
 function Banner() {
   const [movies,SetMovies] = useState([])
   const [urlYt,seturlYt] = useState('')
-  
   useEffect(() => {
     axios.get(banner).then((response)=>{
       SetMovies(response.data.results[1])
     })
   }, [])
   const handleclick=(id)=>{
-    axios.get(`movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then((response)=>{
+    axios.get(`movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`).then((response)=>{
      if(response.data.results.length!==0){
        seturlYt(response.data.results[1])
      }else{

@@ -3,7 +3,6 @@ import './Rowposter.css'
 import axios from '../../Config/axios'
 import {imgUrl} from '../../Constants/Constants'
 import YouTube from 'react-youtube'
-import {API_KEY} from '../../Constants/Constants'
 
 
 
@@ -17,7 +16,7 @@ function Rowposter(props) {
     })
   },[])
   const handleclick=(id)=>{
-   axios.get(`movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then((response)=>{
+   axios.get(`movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`).then((response)=>{
     if(response.data.results.length!==0){
       seturlYt(response.data.results[1])
     }else{
