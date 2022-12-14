@@ -12,12 +12,13 @@
     margin-right: 10px;
     position: relative;
     margin-top: 20px;
-    transition: .3.5s ease-in-out; 
+    transition: .2s ease-in-out; 
 }
 
 .toprated-img:hover{
     cursor: pointer;
-    border: 2px solid white;
+    border: 3px solid white;
+    border-radius: 2px;
 }
 
 .toprated-title{
