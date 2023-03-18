@@ -1,15 +1,15 @@
 import React from 'react'
 import Banner from '../Banner/Banner'
 import Rowposter from '../Rowposter/Rowposter'
-import {music,western,horror,mystery,thriller,sciencefiction,fantasy,family,comedy,crime, originals} from '../../Config/url'
+import { music, western, horror, mystery, thriller, sciencefiction, fantasy, family, comedy, crime, originals } from '../../Config/url'
 import Footer from '../Footer/Footer'
 
 
 function Homescreen() {
- 
+
   return (
     <div>
-      <Banner/>
+      <Banner />
       <Rowposter title='Netflix Originals' url={originals} originals />
       <Rowposter title='Comedy' isSmall url={comedy} />
       <Rowposter title='Crime' isSmall url={crime} />
@@ -22,8 +22,8 @@ function Homescreen() {
       <Rowposter title='Music' isSmall url={music} />
       <Rowposter title='Western' isSmall url={western} />
       <Footer></Footer>
-      </div>
-    
+    </div>
+
   )
 }
 

@@ -28,6 +28,16 @@
 
 }
 
+.header-part{
+    display: flex;
+    justify-content: space-between;
+}
+.header-part input{
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 100px;
+}
 @media (max-width: 767px) {
     .toprated-img {
         
