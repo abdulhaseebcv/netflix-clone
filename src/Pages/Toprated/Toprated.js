@@ -6,11 +6,15 @@ import './Toprated.css'
 
 function Toprated() {
     const [movies, setMovies] = useState([])
+
     const sendReq = () => {
         axios.get(toprated).then((response) => {
             setMovies(response.data.results)
+        }).catch((error) => {
+            alert(error.message)
         })
     }
+
     useEffect(() => {
         sendReq()
     }, [])

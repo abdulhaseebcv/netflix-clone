@@ -10,8 +10,11 @@ function Upcoming() {
     const sendReq = () => {
         axios.get(upcoming).then((response) => {
             setMovies(response.data.results)
+        }).catch((error) => {
+            alert(error.message)
         })
     }
+
     useEffect(() => {
         sendReq()
     }, [])

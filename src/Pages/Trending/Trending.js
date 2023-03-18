@@ -6,9 +6,12 @@ import './Trending.css'
 
 function Trending() {
     const [movies, setMovies] = useState([])
+
     const sendReq = () => {
         axios.get(trending).then((response) => {
             setMovies(response.data.results)
+        }).catch((error) => {
+            alert(error.message)
         })
     }
 

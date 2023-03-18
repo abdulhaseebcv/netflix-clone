@@ -7,17 +7,20 @@ import { imgUrl } from '../../Constants/Constants'
 import YouTube from 'react-youtube'
 
 function Banner() {
-  const [movies, SetMovies] = useState([])
+  const [movies, setMovies] = useState([])
   const [urlYt, seturlYt] = useState('')
 
-  const sendReq = () => {
-    axios.get(banner).then((response) => {
-      SetMovies(response.data.results[0])
+  const sendReq = async () => {
+    await axios.get(banner).then((response) => {
+      setMovies(response.data.results[0])
     })
   }
+
+ 
   useEffect(() => {
     sendReq()
   }, [])
+
   const handleclick = (id) => {
     axios.get(`movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`).then((response) => {
       if (response.data.results.length !== 0) {
@@ -25,6 +28,8 @@ function Banner() {
       } else {
         alert('Sorry,No video found')
       }
+    }).catch((error) => {
+      alert(error.message)
     })
 
 

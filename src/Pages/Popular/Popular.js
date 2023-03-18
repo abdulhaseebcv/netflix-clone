@@ -10,8 +10,11 @@ function Popular() {
     const sendReq = () => {
         axios.get(popular).then((response) => {
             setMovies(response.data.results)
+        }).catch((error) => {
+            alert(error.message)
         })
     }
+
     useEffect(() => {
         sendReq()
     }, [])
