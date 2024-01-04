@@ -21,7 +21,8 @@ function Rowposter(props) {
   }, [])
   
   const handleclick = (id) => {
-    axios.get(`movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEYs}&language=en-US`).then((response) => {
+    console.log(id);
+    axios.get(`movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`).then((response) => {
       if (response.data.results.length !== 0) {
         seturlYt(response.data.results[1])
       } else {

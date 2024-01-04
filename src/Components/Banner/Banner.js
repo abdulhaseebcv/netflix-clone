@@ -12,7 +12,7 @@ function Banner() {
 
   const sendReq = async () => {
     await axios.get(banner).then((response) => {
-      setMovies(response.data.results[0])
+      setMovies(response.data.results[4])
     })
   }
 
@@ -52,8 +52,8 @@ function Banner() {
             <button className='btn'>My List</button>
           </div>
           <h1 className='description'>{movies ? movies.overview : ''}</h1>
-          <div className="fade-shade"></div>
         </div>
+        <div className="fade-shade"></div>
 
       </div>
       {urlYt ? < YouTube videoId={urlYt.key} opts={opts} /> : ''}

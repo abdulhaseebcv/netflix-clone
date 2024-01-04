@@ -17,8 +17,7 @@
 
 .toprated-img:hover{
     cursor: pointer;
-    border: 3px solid white;
-    border-radius: 2px;
+    transform: scale(1.1);
 }
 
 .toprated-title{

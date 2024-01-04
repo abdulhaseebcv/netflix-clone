@@ -3,10 +3,11 @@
     height: 448px;
     color: white;
     margin-top: 69px;
+    position: relative;
 }
 
 .content{
-    padding-top: 140px;
+    padding-top: 11.5%;
     height: 190px; 
 }
 
@@ -55,4 +56,8 @@
 .fade-shade{
     height: 7.4rem;
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
 }

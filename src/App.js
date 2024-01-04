@@ -14,11 +14,11 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact element={<Home />} path="/netflix-clone" />
-          <Route element={<Toprated />} path='/toprated' />
-          <Route element={<Trending />} path='/trending' />
-          <Route element={<Popular />} path='/popular' />
-          <Route element={<Upcoming />} path='/upcoming' />
+          <Route exact element={<Home />} path="/netflix-clone"/>
+          <Route exact element={<Toprated />} path='/toprated' E/>
+          <Route exact element={<Trending />} path='/trending' />
+          <Route exact element={<Popular />} path='/popular' />
+          <Route exact element={<Upcoming />} path='/upcoming' />
         </Routes>
       </BrowserRouter>
     </div>
