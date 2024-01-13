@@ -12,11 +12,15 @@ function Banner() {
 
   const sendReq = async () => {
     await axios.get(banner).then((response) => {
-      setMovies(response.data.results[4])
+
+      // Generate a random index to get a random movie from the array
+      const randomIndex = Math.floor(Math.random() * response.data.results.length);
+      console.log("result==>", response.data.results[randomIndex]);
+      setMovies(response.data.results[randomIndex])
     })
   }
 
- 
+
   useEffect(() => {
     sendReq()
   }, [])
@@ -43,10 +47,10 @@ function Banner() {
   };
 
   return (
-    <div>
+    <>
       <div style={{ backgroundImage: `url(${imgUrl + movies.backdrop_path})` }} className='banner'>
         <div className="content">
-          <h1 className='title'>{movies ? movies.original_title : ''}</h1>
+          <h1 className='title'>{movies && movies.original_title ? movies.original_title : movies && movies.name ? movies.name : '' }</h1>
           <div className="buttons">
             <button onClick={() => handleclick(movies.id)} className='btn'>Play</button>
             <button className='btn'>My List</button>
@@ -57,7 +61,7 @@ function Banner() {
 
       </div>
       {urlYt ? < YouTube videoId={urlYt.key} opts={opts} /> : ''}
-    </div>
+    </>
   )
 }
 export default Banner
